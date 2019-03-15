@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmDemo.View.HomePage"
+             Title="Home">
+    <ContentPage.Content>
+        <StackLayout >
+            <Label Text="Enter your DOB" FontSize="Medium" TextColor="Default" HorizontalOptions="Center" />
+            <DatePicker HorizontalOptions="CenterAndExpand" Date="{Binding SelectedDate}"  />
+
+            <Button Text="Check Your Age" BackgroundColor="Blue" Command="{Binding CheckDate}" TextColor="White"/>
+            <Label Text="{Binding TotalAge}" TextColor="Default" HorizontalOptions="Center" FontSize="Medium" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
